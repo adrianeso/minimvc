@@ -1,0 +1,9 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteBase /minimvc
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^(.*)$ index.php?url=$1 [L]
